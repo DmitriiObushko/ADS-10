@@ -7,14 +7,12 @@ class Tree {
         char value;
         std::vector<Node*> children;
     };
-
     Node* root = nullptr;
     std::vector<char> permutation;
     void buildPermutationTree(std::vector<char> elements, Node* node) {
         if (elements.empty()) {
             return;
         }
-
         for (auto element : elements) {
             Node* child = new Node;
             child->value = element;
@@ -39,7 +37,6 @@ class Tree {
             permutation.pop_back();
         }
     }
-
  public:
     std::vector<std::vector<char>> permutations;
     Tree(std::vector<char> elements) {
